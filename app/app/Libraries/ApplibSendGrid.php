@@ -5,7 +5,7 @@ use SendGrid\Mail\To;
 
 class ApplibSendGrid
 {
-    public function forgetPassword()
+    public function test()
     {
         $from     = '你的來源mail';
         $fromName = '你的來源名稱';
