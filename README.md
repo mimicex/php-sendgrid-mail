@@ -17,6 +17,12 @@ SENDGRID_APIKEY=你的key
 
 ![image](/images/sendgrid-create.jpg "sendGrid > create")
 
+### 載入
+```
+use SendGrid\Mail\Mail;
+use SendGrid\Mail\From;
+use SendGrid\Mail\To;
+```
 ### 來源名稱設定
 ```
 $from     = '你的來源mail';
