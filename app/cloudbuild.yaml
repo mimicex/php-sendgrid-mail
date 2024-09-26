@@ -1,0 +1,23 @@
+steps:
+  - name: 'docker'
+    args: [
+      'build',
+      '--platform=linux/amd64',
+      '-t',
+      #'asia-east1-docker.pkg.dev/$PROJECT_ID/你建立的區塊名稱/你想要的名稱'
+      'asia-east1-docker.pkg.dev/$PROJECT_ID/test/php${_VERSION}',
+      '-f',
+      'Dockerfile',
+      '.'
+    ]
+# cloud build 執行機器規格
+options:
+  machineType: 'E2_HIGHCPU_8'
+timeout: 2400s
+# 請參照 cloud build Triggers
+# Substitution variables 參數
+substitutions:
+  _VERSION: $_VERSION
+images:
+  #'asia-east1-docker.pkg.dev/$PROJECT_ID/你建立的區塊名稱/你想要的名稱'
+  - 'asia-east1-docker.pkg.dev/$PROJECT_ID/test/php'
